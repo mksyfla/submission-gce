@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-padding-top: 75px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Inter', sans-serif;
+  background-color: whitesmoke;
+}
+
+.jumbotron {
+  background-image:
+    url('../images/background.jpg'),
+    linear-gradient(#e4e4e4 65%, #3d3d3d);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100vh;
+  padding: 0px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 700;
+    word-spacing: 40px;
+    text-shadow: 5px 5px 15px #a4a4a4;
+  }
+
+  p {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 20px;
+    color: whitesmoke;
+  }
+}
+
+header {
+  display: inline;
+}
+
+nav {
+  top: 0;
+  padding: 10px 50px;
+  height: 75px;
+  background-color: #5C8D89;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  z-index: 10;
+
+  p {
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  li {
+    list-style-type: none;
+
+    a {
+      color: whitesmoke;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:active {
+      color: #aaaaaa;
+    }
+  }
+
+  .icon {
+    display: none;
+    color: whitesmoke;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .icon:active {
+    color: #aaaaaa;
+  }
+}
+
+main {
+  padding: 0 20px;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  article {
+    box-sizing: border-box;
+    padding: 0px 25px;
+    width: 75%;
+
+    h2 {
+      font-size: 35px;
+      text-align: center;
+    }
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+
+      section {
+        box-sizing: border-box;
+        background-color: white;
+        box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+        border-radius: 25px;
+        width: 45%;
+        padding: 20px 50px;
+
+        h4 {
+          text-align: center;
+        }
+
+        img {
+          width: 100%;
+          height: 10rem;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  aside {
+    width: 25%;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: max-content;
+      width: fit-content;
+      
+      header {
+        width: 100%;
+
+        figure {
+          margin: 0;
+        }
+      }
+
+      header, header > h2, section > h3 {
+        text-align: center;
+      }
+
+      section > table {
+        margin: auto;
+      }
+    }
+  }
+}
+
+footer {
+  height: calc(100vh - 75px);
+  background-color: #324c4a;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  color: whitesmoke;
+  padding: 0 100px;
+  align-content: space-around;
+  box-sizing: border-box;
+}
+
+footer > div {
+  width: 100%;
+  
+  h1 {
+    font-size: 75px;
+  }
+}
+
+footer > #copy > p {
+  opacity: 0.5;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .jumbotron {
+    background-position-x: 75%;
+  }
+
+  .jumbotron > h1 {
+    font-size: 40px;
+    word-spacing: 30px;
+  }
+
+  .jumbotron > p {
+    font-size: 20px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main > article {
+    width: 100%;
+  }
+
+  main > article > div > section {
+    flex: 45%;
+  }
+
+  main > aside {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer > div > h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  html {
+    scroll-padding-top: 50px;
+  }
+
+  .jumbotron {
+    background-position-x: 75%;
+  }
+
+  .jumbotron > h1 {
+    font-size: 20px;
+    word-spacing: 7.5px;
+  }
+
+  .jumbotron > p {
+    font-size: 10px;
+  }
+
+  nav {
+    height: 50px;
+  }
+
+  nav > p {
+    display: inline;
+    white-space: nowrap;
+  }
+
+  nav > .topnav.hide {
+    display: none;
+  }
+
+  nav > .icon {
+    display: block;
+  }
+
+  nav > .topnav.show {
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    width: 100vw;
+    height: 50px;
+    box-sizing: border-box;
+    margin-left: -50px;
+    margin-top: 0;
+  }
+
+  main > article {
+    width: 100%;
+  }
+
+  main > article > h2 {
+    font-size: 25px;
+  }
+
+  main > article > div > section {
+    flex: 50%;
+  }
+
+  main > aside {
+    width: 100%;
+  }
+
+  footer {
+    height: calc(100vh - 50px);
+    padding: 75px;
+  }
+
+  footer > div > h1 {
+    font-size: 35px;
+  }
+}
